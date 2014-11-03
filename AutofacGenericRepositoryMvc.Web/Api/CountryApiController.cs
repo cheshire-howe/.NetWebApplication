@@ -1,17 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
+﻿using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
-using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
 using AutofacGenericRepositoryMvc.Model.Concrete;
 using AutofacGenericRepositoryMvc.Service.Interfaces;
 
-namespace AutofacGenericRepositoryMvc.Web.Controllers
+namespace AutofacGenericRepositoryMvc.Web.Api
 {
     public class CountryApiController : ApiController
     {
