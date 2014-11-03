@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutofacGenericRepositoryMvc.Web", "AutofacGenericRepositoryMvc.Web\AutofacGenericRepositoryMvc.Web.csproj", "{9C1365A1-7D87-4D23-9CAB-FB371189FCB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutofacGenericRepositoryMvc.Model", "AutofacGenericRepositoryMvc.Model\AutofacGenericRepositoryMvc.Model.csproj", "{18EF5C87-578A-4916-BE16-2A3F4A2A9731}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutofacGenericRepositoryMvc.Repository", "AutofacGenericRepositoryMvc.Repository\AutofacGenericRepositoryMvc.Repository.csproj", "{B1B2544F-E724-470E-9930-B8B0E8915FC1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutofacGenericRepositoryMvc.Service", "AutofacGenericRepositoryMvc.Service\AutofacGenericRepositoryMvc.Service.csproj", "{19BFFA34-5027-4DBF-858E-7881523916E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutofacGenericRepositoryMvc.Test", "AutofacGenericRepositoryMvc.Test\AutofacGenericRepositoryMvc.Test.csproj", "{D45CE217-F82B-4566-80AC-7097419984B7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9C1365A1-7D87-4D23-9CAB-FB371189FCB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C1365A1-7D87-4D23-9CAB-FB371189FCB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C1365A1-7D87-4D23-9CAB-FB371189FCB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C1365A1-7D87-4D23-9CAB-FB371189FCB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18EF5C87-578A-4916-BE16-2A3F4A2A9731}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18EF5C87-578A-4916-BE16-2A3F4A2A9731}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18EF5C87-578A-4916-BE16-2A3F4A2A9731}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18EF5C87-578A-4916-BE16-2A3F4A2A9731}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1B2544F-E724-470E-9930-B8B0E8915FC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1B2544F-E724-470E-9930-B8B0E8915FC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1B2544F-E724-470E-9930-B8B0E8915FC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1B2544F-E724-470E-9930-B8B0E8915FC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19BFFA34-5027-4DBF-858E-7881523916E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19BFFA34-5027-4DBF-858E-7881523916E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19BFFA34-5027-4DBF-858E-7881523916E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19BFFA34-5027-4DBF-858E-7881523916E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D45CE217-F82B-4566-80AC-7097419984B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D45CE217-F82B-4566-80AC-7097419984B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D45CE217-F82B-4566-80AC-7097419984B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D45CE217-F82B-4566-80AC-7097419984B7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

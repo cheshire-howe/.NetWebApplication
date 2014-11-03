@@ -1,0 +1,37 @@
+﻿<form name="form" class="form-horizontal" role="form">
+    <div class="form-group" ng-class="{error: form.Name.$invalid}">
+        <label for="Name" class="col-md-2 control-label">Name</label>
+        <div class="col-md-8">
+            <input type="text" class="form-control" ng-model="item.Name" id="Name" />
+        </div>
+    </div>
+    <div class="form-group" ng-class="{error: form.Phone.$invalid}">
+        <label for="Phone" class="col-md-2 control-label">Phone</label>
+        <div class="col-md-8">
+            <input type="text" class="form-control" ng-model="item.Phone" id="Phone" />
+        </div>
+    </div>
+    <div class="form-group" ng-class="{error: form.Address.$invalid}">
+        <label for="Address" class="col-md-2 control-label">Address</label>
+        <div class="col-md-8">
+            <input type="text" class="form-control" ng-model="item.Address" id="Address" />
+        </div>
+    </div>
+    <div class="form-group" ng-class="{error: form.State.$invalid}">
+        <label for="State" class="col-md-2 control-label">State</label>
+        <div class="col-md-8">
+            <input type="text" class="form-control" ng-model="item.State" id="State" />
+        </div>
+    </div>
+    <div class="form-group" ng-class="{error: form.Languages.$invalid}">
+        <label for="Languages" class="col-md-2 control-label">Languages</label>
+        <div class="col-md-8">
+            <input type="text" class="form-control" ng-model="item.Languages" id="Languages" />
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-8">
+            <button class="btn btn-primary">Go!</button>
+        </div>
+    </div>
+</form>

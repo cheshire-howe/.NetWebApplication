@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Angular";
+}
+@section headscripts
+{
+    <script src="~/Scripts/angular/angular.min.js"></script>
+    <script src="~/Scripts/angular/angular-route.min.js"></script>
+    <script src="~/Scripts/angular/angular-resource.min.js"></script>
+}
+
+<h2>Angular Example</h2>
+
+<div ng-app="personApp">
+    <div ng-view></div>
+</div>
+
+@section scripts
+{
+    <script src="~/Scripts/app/app.js"></script>
+    <script src="~/Scripts/app/controllers.js"></script>
+    <script src="~/Scripts/app/services.js"></script>
+    <script src="~/Scripts/app/directives.js"></script>
+}
