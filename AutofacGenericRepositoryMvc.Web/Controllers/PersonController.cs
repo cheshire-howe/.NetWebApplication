@@ -82,6 +82,7 @@ namespace AutofacGenericRepositoryMvc.Web.Controllers
                 return HttpNotFound();
             }
             ViewBag.CountryId = new SelectList(_countryService.GetAll(), "Id", "Name", person.CountryId);
+            ViewBag.Languages = _personService.CreateStringFromListOfLanguagesInDatabase(id.Value);
             return View(person);
         }
 
@@ -90,15 +91,16 @@ namespace AutofacGenericRepositoryMvc.Web.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Name,Phone,Address,State,CountryId,CreatedDate,CreatedBy,UpdatedDate,UpdatedBy")] Person person)
+        public ActionResult Edit([Bind(Include = "Id,Name,Phone,Address,State, Languages,CountryId,CreatedDate,CreatedBy,UpdatedDate,UpdatedBy")] PersonDto personDto)
         {
             if (ModelState.IsValid)
             {
-                _personService.Update(person);
+                _personService.UpdatePersonFromDto(personDto);
                 return RedirectToAction("Index");
             }
-            ViewBag.CountryId = new SelectList(_countryService.GetAll(), "Id", "Name", person.CountryId);
-            return View(person);
+            ViewBag.CountryId = new SelectList(_countryService.GetAll(), "Id", "Name", personDto.CountryId);
+            ViewBag.Languages = _personService.CreateStringFromListOfLanguagesInDatabase(personDto.Id);
+            return View(personDto);
         }
 
         // GET: Person/Delete/5

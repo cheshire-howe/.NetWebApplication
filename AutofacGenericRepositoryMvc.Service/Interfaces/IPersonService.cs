@@ -13,5 +13,6 @@ namespace AutofacGenericRepositoryMvc.Service.Interfaces
         Person GetById(long id);
         void CreatePersonFromDto(PersonDto personDto);
         void UpdatePersonFromDto(PersonDto personDto);
+        string CreateStringFromListOfLanguagesInDatabase(long id);
     }
 }

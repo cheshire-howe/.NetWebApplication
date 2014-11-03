@@ -59,7 +59,7 @@ namespace AutofacGenericRepositoryMvc.Service.Concrete
             personToUpdate.State = personDto.State;
             personToUpdate.CountryId = personDto.CountryId;
 
-            if (personDto.Languages == "")
+            if (string.IsNullOrEmpty(personDto.Languages))
             {
                 personToUpdate.Languages = new List<Language>();
                 Update(personToUpdate);
@@ -131,6 +131,19 @@ namespace AutofacGenericRepositoryMvc.Service.Concrete
             }
 
             return languages;
+        }
+
+        public string CreateStringFromListOfLanguagesInDatabase(long id)
+        {
+            var languages = _personRepository.GetById(id).Languages.ToList();
+
+            List<string> l = new List<string>();
+            foreach (var language in languages)
+            {
+                l.Add(language.Name);
+            }
+
+            return string.Join(", ", l);
         }
     }
 }
