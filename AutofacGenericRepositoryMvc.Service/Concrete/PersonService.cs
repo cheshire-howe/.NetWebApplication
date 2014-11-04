@@ -69,39 +69,27 @@ namespace AutofacGenericRepositoryMvc.Service.Concrete
             var p = Regex.Replace(personDto.Languages, @"\s+", "");
             string[] updatedLanguages = p.Split(',');
 
-            var personLanguages = new HashSet<int>(personToUpdate.Languages.Select(c => c.Id));
-
             var languagesInDb = _languageRepository.GetAll().ToList();
+
+            var newListOfLanguages = new List<Language>();
 
             foreach (var updatedLanguage in updatedLanguages)
             {
                 var lang = languagesInDb.SingleOrDefault(l => l.Name == updatedLanguage) ?? null;
                 if (lang == null)
                 {
-                    personToUpdate.Languages.Add(new Language()
+                    newListOfLanguages.Add(new Language()
                     {
                         Name = updatedLanguage
                     });
                 }
-            }
-
-            foreach (var language in languagesInDb)
-            {
-                if (updatedLanguages.Contains(language.Name))
-                {
-                    if (!personLanguages.Contains(language.Id))
-                    {
-                        personToUpdate.Languages.Add(language);
-                    }
-                }
                 else
                 {
-                    if (personLanguages.Contains(language.Id))
-                    {
-                        personToUpdate.Languages.Remove(language);
-                    }
+                    newListOfLanguages.Add(lang);
                 }
             }
+
+            personToUpdate.Languages = newListOfLanguages;
 
             Update(personToUpdate);
         }
