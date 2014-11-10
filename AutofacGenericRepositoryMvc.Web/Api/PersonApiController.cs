@@ -5,9 +5,11 @@ using System.Web.Http.Description;
 using AutofacGenericRepositoryMvc.Model.Concrete;
 using AutofacGenericRepositoryMvc.Service.DataTransferObjects;
 using AutofacGenericRepositoryMvc.Service.Interfaces;
+using AutofacGenericRepositoryMvc.Web.ActionFilters;
 
 namespace AutofacGenericRepositoryMvc.Web.Api
 {
+    [AddCustomHeaderFilter]
     public class PersonApiController : ApiController
     {
         private IPersonService _personService;

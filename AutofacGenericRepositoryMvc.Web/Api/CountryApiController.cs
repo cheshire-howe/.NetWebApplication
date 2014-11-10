@@ -7,9 +7,11 @@ using System.Web.Http;
 using System.Web.Http.Description;
 using AutofacGenericRepositoryMvc.Model.Concrete;
 using AutofacGenericRepositoryMvc.Service.Interfaces;
+using AutofacGenericRepositoryMvc.Web.ActionFilters;
 
 namespace AutofacGenericRepositoryMvc.Web.Api
 {
+    [AddCustomHeaderFilter]
     public class CountryApiController : ApiController
     {
         private ICountryService _countryService;

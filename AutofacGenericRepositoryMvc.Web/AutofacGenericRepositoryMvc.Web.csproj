@@ -137,6 +137,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActionFilters\AddCustomHeaderActionFilter.cs" />
     <Compile Include="Api\CountryApiController.cs" />
     <Compile Include="Api\PersonApiController.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
