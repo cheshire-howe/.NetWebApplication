@@ -1,0 +1,66 @@
+﻿<h1>Edit {{person.Name}}</h1>
+
+<form name="form" class="form-horizontal" role="form" ng-submit="update(item)">
+    <div class="form-horizontal">
+        <h4>Person</h4>
+        <hr />
+
+        <input data-val="true" data-val-number="The field Id must be a number." data-val-required="The Id field is required." id="Id" name="Id" type="hidden" value="18" />
+
+        <div class="form-group">
+            <label class="control-label col-md-2" for="Name">Name</label>
+            <div class="col-md-10">
+                <input class="form-control text-box single-line" data-val="true" data-val-maxlength="The field Name must be a string or array type with a maximum length of &#39;50&#39;." data-val-maxlength-max="50" data-val-required="The Name field is required." id="Name" name="Name" type="text" ng-model="person.Name" />
+                <span class="field-validation-valid text-danger" data-valmsg-for="Name" data-valmsg-replace="true"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2" for="Phone">Phone</label>
+            <div class="col-md-10">
+                <input class="form-control text-box single-line" data-val="true" data-val-maxlength="The field Phone must be a string or array type with a maximum length of &#39;20&#39;." data-val-maxlength-max="20" data-val-required="The Phone field is required." id="Phone" name="Phone" type="text" ng-model="person.Phone" />
+                <span class="field-validation-valid text-danger" data-valmsg-for="Phone" data-valmsg-replace="true"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2" for="Address">Address</label>
+            <div class="col-md-10">
+                <input class="form-control text-box single-line" data-val="true" data-val-maxlength="The field Address must be a string or array type with a maximum length of &#39;100&#39;." data-val-maxlength-max="100" data-val-required="The Address field is required." id="Address" name="Address" type="text" ng-model="person.Address" />
+                <span class="field-validation-valid text-danger" data-valmsg-for="Address" data-valmsg-replace="true"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2" for="State">State</label>
+            <div class="col-md-10">
+                <input class="form-control text-box single-line" data-val="true" data-val-maxlength="The field State must be a string or array type with a maximum length of &#39;50&#39;." data-val-maxlength-max="50" data-val-required="The State field is required." id="State" name="State" type="text" ng-model="person.State" />
+                <span class="field-validation-valid text-danger" data-valmsg-for="State" data-valmsg-replace="true"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2" for="CountryId">CountryId</label>
+            <div class="col-md-10">
+                <select class="form-control" ng-model="person.CountryId" ng-options="country.Id as country.Name for country in countries"></select>
+                <span class="field-validation-valid text-danger" data-valmsg-for="CountryId" data-valmsg-replace="true"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="Languages" class="control-label col-md-2">Languages You Speak</label>
+            <div class="col-md-10">
+                <input type="text" class="form-control" id="Languages" name="Languages" ng-model="person.Languages" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
+<div>
+    <a ui-sref="list">Back to List</a>
+</div>

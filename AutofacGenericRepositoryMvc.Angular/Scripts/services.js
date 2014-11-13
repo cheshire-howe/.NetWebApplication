@@ -2,6 +2,14 @@
 
 // Demonstrate how to register services
 // In this case it is a simple value service.
-angular.module('app.services', [])
+var personServices = angular.module('app.services', ['ngResource']);
 
-    .value('version', '0.1');
+personServices.factory('Person', [
+    '$resource', function($resource) {
+        return $resource('http://localhost:1708/api/PersonApi/:id', { id: '@id' }, {
+            update: {
+                method: 'PUT'
+            }
+        });
+    }
+]);

@@ -62,7 +62,7 @@ personControllers.controller('PersonEditCtrl', [
                 $scope.item.Languages = s;
             });
             $http.get('/api/CountryApi').
-                success(function (countries) {
+                success(function(countries) {
                     $scope.countries = countries;
                 });
         };

@@ -1,0 +1,17 @@
+﻿<ul>
+    <li ng-repeat="person in people">
+        <h3><a href="Person/{{person.Id}}">{{person.Name}}</a></h3>
+        <p>
+            <a href="Person/{{person.Id}}/edit">Edit</a> |
+            <a id="delete" ng-really-message="Are You Sure?" ng-really-click="deletePerson(person.Id)">Delete</a>
+        </p>
+        <p>{{person.Phone}}</p>
+        <p>{{person.Address}}, {{person.State}}, {{person.Country.Name}}</p>
+        <span>Speaks:</span>
+        <ul>
+            <li ng-repeat="language in person.Languages">
+                {{language.Name}}
+            </li>
+        </ul>
+    </li>
+</ul>

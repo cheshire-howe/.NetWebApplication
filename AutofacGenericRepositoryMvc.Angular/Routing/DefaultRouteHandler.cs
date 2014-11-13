@@ -43,8 +43,8 @@ namespace App.AutofacGenericRepositoryMvc.Angular.Routing
 
             if (handler == null)
             {
-                requestContext.RouteData.DataTokens.Add("templateUrl", "/views/404");
-                handler = WebPageHttpHandler.CreateFromVirtualPath("~/views/404.cshtml");
+                requestContext.RouteData.DataTokens.Add("templateUrl", "/views/index");
+                handler = WebPageHttpHandler.CreateFromVirtualPath("~/views/index.cshtml");
             }
             else
             {

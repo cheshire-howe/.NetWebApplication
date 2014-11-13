@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Net;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using System.Web.Http.Description;
 using AutofacGenericRepositoryMvc.Model.Concrete;
 using AutofacGenericRepositoryMvc.Service.DataTransferObjects;
@@ -9,7 +10,7 @@ using AutofacGenericRepositoryMvc.Web.ActionFilters;
 
 namespace AutofacGenericRepositoryMvc.Web.Api
 {
-    [AddCustomHeaderFilter]
+    [EnableCors(origins: "http://localhost:8080", headers: "*", methods: "*")]
     public class PersonApiController : ApiController
     {
         private IPersonService _personService;

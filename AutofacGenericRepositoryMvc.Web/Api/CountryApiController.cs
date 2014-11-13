@@ -4,6 +4,7 @@ using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using System.Web.Http.Description;
 using AutofacGenericRepositoryMvc.Model.Concrete;
 using AutofacGenericRepositoryMvc.Service.Interfaces;
@@ -11,7 +12,7 @@ using AutofacGenericRepositoryMvc.Web.ActionFilters;
 
 namespace AutofacGenericRepositoryMvc.Web.Api
 {
-    [AddCustomHeaderFilter]
+    [EnableCors(origins: "http://localhost:8080", headers: "*", methods: "*")]
     public class CountryApiController : ApiController
     {
         private ICountryService _countryService;

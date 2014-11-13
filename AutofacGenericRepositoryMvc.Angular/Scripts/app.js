@@ -1,14 +1,17 @@
 ﻿'use strict';
 
 // Declares how the application should be bootstrapped. See: http://docs.angularjs.org/guide/module
-angular.module('app', ['ui.router', 'app.filters', 'app.services', 'app.directives', 'app.controllers'])
+angular.module('app', ['ui.router', 'ngResource', 'app.filters', 'app.services', 'app.directives', 'app.controllers'])
 
     // Gets executed during the provider registrations and configuration phase. Only providers and constants can be
     // injected here. This is to prevent accidental instantiation of services before they have been fully configured.
-    .config(['$stateProvider', '$locationProvider', function ($stateProvider, $locationProvider) {
+    .config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function ($stateProvider, $urlRouterProvider, $locationProvider) {
 
         // UI States, URL Routing & Mapping. For more info see: https://github.com/angular-ui/ui-router
         // ------------------------------------------------------------------------------------------------------------
+        
+        // For any unmatched state
+        $urlRouterProvider.otherwise('/');
 
         $stateProvider
             .state('home', {
@@ -22,16 +25,20 @@ angular.module('app', ['ui.router', 'app.filters', 'app.services', 'app.directiv
                 templateUrl: '/views/about',
                 controller: 'AboutCtrl'
             })
-            .state('login', {
-                url: '/login',
-                layout: 'basic',
-                templateUrl: '/views/login',
-                controller: 'LoginCtrl'
+            .state('list', {
+                url: '/People',
+                templateUrl: '/views/list',
+                controller: 'ListCtrl'
             })
-            .state('otherwise', {
-                url: '*path',
-                templateUrl: '/views/404',
-                controller: 'Error404Ctrl'
+            .state('detail', {
+                url: '/Person/:id',
+                templateUrl: '/views/detail',
+                controller: 'DetailCtrl'
+            })
+            .state('edit', {
+                url: '/Person/:id/edit',
+                templateUrl: '/views/edit',
+                controller: 'EditCtrl'
             });
 
         $locationProvider.html5Mode(true);

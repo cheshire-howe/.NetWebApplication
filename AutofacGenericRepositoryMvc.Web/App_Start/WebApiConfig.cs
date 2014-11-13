@@ -9,6 +9,8 @@ namespace AutofacGenericRepositoryMvc.Web
     {
         public static void Register(HttpConfiguration config)
         {
+            config.EnableCors();
+
             config.Formatters.JsonFormatter.SerializerSettings.ReferenceLoopHandling =
                 Newtonsoft.Json.ReferenceLoopHandling.Ignore;
 
