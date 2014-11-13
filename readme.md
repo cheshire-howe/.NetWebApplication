@@ -10,7 +10,7 @@ The Repository layer follows both the generic repository pattern and unit of wor
 
 The Service layer has many more responsibilities, also. This layer ties everything together and holds the business logic to coordinate all database interaction. The methods in the Service layer have names that make their purpose clear, and wrap entire transactions with any logic into one neat package. This way, any UI layer that needs to retrieve from or modify the database needs one line of code to get the job done.
 
-There are two individual UI layers.
+There are three individual UI layers. An MVC website and AngularJS 1 run on one server to demonstrate the power of the MVC framework, when combined with WebAPI, to be able to do both. AngularJS 2 is a Web Pages project that runs off a separate server and other than routing is purely frontend programming.
 
 ### MVC
 The MVC UI layer uses Microsoft's latest in web design, MVC 5. This layer uses controllers and actions to return Razor views with a reference to only the Service layer for any data that a view may need.
