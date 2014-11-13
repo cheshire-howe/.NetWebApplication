@@ -496,6 +496,8 @@
     <Content Include="Views\List.cshtml" />
     <Content Include="Views\Detail.cshtml" />
     <Content Include="Views\Edit.cshtml" />
+    <Content Include="Views\Shared\Form.html" />
+    <Content Include="Views\Create.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -517,7 +519,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Images\" />
-    <Folder Include="Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />

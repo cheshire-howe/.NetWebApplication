@@ -48,6 +48,31 @@ angular.module('app.controllers', [])
         });
     }])
 
+    // Path: /Person/new
+    .controller('CreateCtrl', [
+        '$scope', '$location', '$state', '$stateParams', '$window', '$http', 'Person',
+        function ($scope, $location, $state, $stateParams, $window, $http, Person) {
+            $scope.person = new Person();
+
+            $http.get('http://localhost:1708/api/CountryApi').
+                success(function (countries) {
+                    $scope.countries = countries;
+                    $scope.person.CountryId = countries[0].Id;
+                });
+
+            $scope.add = function () {
+                $scope.person.$save(function () {
+                    $state.go('list');
+                });
+            };
+
+            $scope.$root.title = 'AngularJS SPA | Person Details';
+            $scope.$on('$viewContentLoaded', function () {
+                $window.ga('send', 'pageview', { 'page': $location.path(), 'title': $scope.$root.title });
+            });
+        }
+    ])
+
     // Path: /Person/:id/edit
     .controller('EditCtrl', [
         '$scope', '$state', '$stateParams', '$location', '$window', '$http', 'Person',

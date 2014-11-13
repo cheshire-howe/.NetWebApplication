@@ -30,15 +30,20 @@ angular.module('app', ['ui.router', 'ngResource', 'app.filters', 'app.services',
                 templateUrl: '/views/list',
                 controller: 'ListCtrl'
             })
-            .state('detail', {
-                url: '/Person/:id',
-                templateUrl: '/views/detail',
-                controller: 'DetailCtrl'
+            .state('create', {
+                url: '/Person/new',
+                templateUrl: '/views/create',
+                controller: 'CreateCtrl'
             })
             .state('edit', {
                 url: '/Person/:id/edit',
                 templateUrl: '/views/edit',
                 controller: 'EditCtrl'
+            })
+            .state('detail', {
+                url: '/Person/:id',
+                templateUrl: '/views/detail',
+                controller: 'DetailCtrl'
             });
 
         $locationProvider.html5Mode(true);
