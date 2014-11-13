@@ -16,11 +16,9 @@ There are two individual UI layers.
 The MVC UI layer uses Microsoft's latest in web design, MVC 5. This layer uses controllers and actions to return Razor views with a reference to only the Service layer for any data that a view may need.
 
 ### AngularJS
-#### 1
-The AngularJS UI uses Microsoft's WebAPI 2.0 to retrieve data and modify the database. This is not built as a separate layer, but uses MVC's capability to return partial views so Angular can switch between pages. The ngResource module is used to interact with the WebApi sending and receiving data in JSON format. The WebAPI also has access to only the Service layer and uses the same methods as MVC to interact with the database.
+1. The AngularJS UI uses Microsoft's WebAPI 2.0 to retrieve data and modify the database. This is not built as a separate layer, but uses MVC's capability to return partial views so Angular can switch between pages. The ngResource module is used to interact with the WebApi sending and receiving data in JSON format. The WebAPI also has access to only the Service layer and uses the same methods as MVC to interact with the database.
 
-#### 2
-There is a separate project built using AngularJS as well to demonstrate the use of CORS and uses Microsoft's Web Pages as the template. This project is standalone and only requires that the API be running on some server.
+2. There is a separate project built using AngularJS as well to demonstrate the use of CORS and uses Microsoft's Web Pages as the template. This project is standalone and only requires that the API be running on some server.
 
 ## Database Functionality and Entity Framework
 This project demonstrates the use of Entity Framework to handle not only basic database interaction, but also one-to-many and many-to-many relationships. The Service layer harnesses the power Entity Framework by encapsulating all logic of the complex relationships so that any UI Layer has simple, easy to understand methods exposed to it which do not require extensive knowledge of Entity Framework in order to use.
